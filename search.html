@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- 
+   |   Powered By Shuwon - www.shuwon.com  |
+   |   Tel:028-85917677  18628176767       |
+   |   E-mail:service@shuwon.com           |
+            __     __       
+           /  \~~~/  \    
+     ,----(     ..    ) 
+    /      \__     __/   
+   /|         (\  |(
+  ^ \   /___\  /\ |   
+     |__|   |__|-" 
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="http://www.shuwon.com" />
+    <meta name="keywords" content="{$keywords}" />
+    <meta name="description" content="{$description}" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="/statics/assets/lib/style/common.css" />
+    
+    <link rel="stylesheet" href="/statics/assets/lib/style/swiper.css" />
+    <link rel="stylesheet" href="/statics/assets/lib/style/animate.min.css" />
+    <link rel="stylesheet" href="/statics/assets/style/sdx.shuwon.css" />
+    <title>{$web_name}</title>
+    <!--[if IE]>
+        <link rel="stylesheet" href="/statics/assets/lib/style/ie.css" />
+    <![endif]-->
+    <!--[if lt IE 9]><script>window.location.href = "ie.html"</script><![endif]-->
+</head>
+
+<body>
+    <div class="container" id="">
+        <header class="animated header">{include file="header.html"}</header>
+        
+        <div id="main">
+            <div class="scroll">
+
+                <article id="news" class="bg RP">
+
+                    <main class="newstMain widthSome common-main">
+                           
+                        <div class="box box1 clearfix">
+                            <div class="t-title">
+                                <img src="/statics/assets/images/searchTit.png" alt="">
+                            </div>
+
+                            <ul class="news-list ">
+                               {foreach from=$search_list item=list name=foo}
+                               <li>
+                                <a href="{$list.url}"  class="inline-box">
+                                    <div class="left-item">
+                                        <div class="img-box">
+                                            <img src="{$list.face}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="right-item">
+                                        <p class="news-title">{$list.title}</p>
+                                        <p class="titme">{$list.add_time|timeformat:2}</p>
+                                        <p class="news-c">
+                                            {$list.abstract|truncate:100:'...'}
+                                        </p>
+                                        <p class="more">more <span>+</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                                {foreachelse}
+                                <li style="font-size: 23px;">没有符合的内容，请重新搜索！</li>
+                               {/foreach}
+                            </ul>
+                            <div style="display: none" class="loadmore inline-box">
+                                <p>展开查看更多</p>
+                                <p>+</p>
+                            </div>
+                        </div>
+                    </main>
+                </article>
+                <footer class="footer">
+                    {include file="footer.html"}
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/statics/assets/lib/js/jquery-1.10.1.min.js"></script>
+<script src="/statics/assets/lib/js/swiper.min.js"></script>
+<script src="/statics/assets/js/loadash.js"></script>
+<script src="/statics/assets/js/current-device.js"></script>
+<script src="/statics/assets/lib/js/iscroll-probe.js"></script>
+<script src="/statics/assets/js/sdx.shuwon.js"></script>
+
+</html>
+<script>
+    window.onload = function () {
+        shuwon.loaded();
+        shuwon.commonScroll()
+       
+    }
+    var swiper = new Swiper('.box3 .swiper-container', {
+        resistanceRatio: 0,
+        slidesPerView: 3,
+        navigation: {
+            nextEl: '.c-right',
+            prevEl: '.c-left',
+        },
+    });
+    new Swiper('.box1 .swiper-container', {
+        slidesPerView: 'auto',
+        resistanceRatio: 0,
+        spaceBetween: 40,
+        normalizeSlideIndex: false
+    })
+    new Swiper('.box2 .swiper-container', {
+        slidesPerView: 'auto',
+        resistanceRatio: 0,
+        spaceBetween: 40,
+        normalizeSlideIndex: false
+    })
+    new Swiper('.box4 .swiper-container', {
+        slidesPerView: 'auto',
+        resistanceRatio: 0,
+        spaceBetween: 540,
+        normalizeSlideIndex: false,
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+    })
+</script>

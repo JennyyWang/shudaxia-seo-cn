@@ -1,0 +1,295 @@
+<div class="n_box">
+    <div class="n_boxs">
+
+        <h1>
+
+            <a href="/">
+
+                <img src="/statics/assets/images/logo1.png" />
+
+            </a>
+
+        </h1>
+
+        <nav>
+
+            <a href="/" {if $nav_id==1}class="active"{/if}>
+
+                <span>首页</span>
+
+                <div class="line">
+
+                    <div class="s"></div>
+
+                    <i class="i"></i>
+
+                    <i class="i1"></i>
+
+                </div>
+
+            </a>
+
+            <a href="/product/"  {if $nav_id==2}class="active"{/if}>
+
+                <span>产品</span>
+
+                <div class="line">
+
+                    <div class="s"></div>
+
+                    <i class="i"></i>
+
+                    <i class="i1"></i>
+
+                </div>
+
+            </a>
+
+            <a href="/store/" {if $nav_id==3}class="active"{/if}>
+
+                <span>门店</span>
+
+                <div class="line">
+
+                    <div class="s"></div>
+
+                    <i class="i"></i>
+
+                    <i class="i1"></i>
+
+                </div>
+
+            </a>
+
+            <a href="/news/" {if $nav_id==4}class="active"{/if}>
+
+                <span>动态</span>
+
+                <div class="line">
+
+                    <div class="s"></div>
+
+                    <i class="i"></i>
+
+                    <i class="i1"></i>
+
+                </div>
+
+            </a>
+
+            <a href="/team/" {if $nav_id==5}class="active"{/if}>
+
+                <span>团队</span>
+
+                <div class="line">
+
+                    <div class="s"></div>
+
+                    <i class="i"></i>
+
+                    <i class="i1"></i>
+
+                </div>
+
+            </a>
+
+            <a href="/join/" {if $nav_id==6}class="active"{/if}>
+
+                <span>加盟</span>
+
+                <div class="line">
+
+                    <div class="s"></div>
+
+                    <i class="i"></i>
+
+                    <i class="i1"></i>
+
+                </div>
+
+            </a>
+
+            <a href="/about/" {if $nav_id==7}class="active"{/if}>
+
+                <span>我们</span>
+
+                <div class="line">
+
+                    <div class="s"></div>
+
+                    <i class="i"></i>
+
+                    <i class="i1"></i>
+
+                </div>
+
+            </a>
+
+            <a href="###">
+
+                <img src="/statics/assets/images/tel.png" />
+
+            </a>
+
+            <div class="sel">
+
+                <i class="serach">
+
+                    <div class="input-box">
+
+                            <form action="/index.php?m=content&c=index&a=search1" method="post" id="form">
+
+                                <label class="inline-box">
+
+                                    <input type="text" name="keyword">
+
+                                    <input type="submit" class="search" style="width: 80px;" value="">
+
+                                </label>
+
+                            </form>
+
+                    </div>
+
+                </i>
+
+                <i class="dqiu"></i>
+
+                <i class="">EN
+
+                    <ul>
+
+                        <li>
+                            <a href="http://www.sdxhotpot.com" target="_blank" style="padding: 0px;background: none;line-height: 1.4;top: 0px;color: #fff;">EN</a>
+                        </li>
+                        <li>
+                            <a href="http://www.cd-sdx.com/" target="_blank" style="padding: 0px;background: none;line-height: 1.4;top: 0px;color: #fff;">CN</a>
+                        </li>
+
+                    </ul>
+
+                </i>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</div>
+
+<div class="m-h-d">
+
+        <a href="/" class="m-home">
+
+            <img src="/statics/assets/images/logo1.png" alt="">
+
+        </a>
+
+</div>
+
+<div class="menubtn">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+    </div>
+
+<div class="m-header">
+
+    
+
+    <div class="m-cover"></div>
+
+    <div class="m-h-cover">
+
+        <ul {if $nav_id==1}class="active"{/if}>
+
+            <li><a href="/">首页</a></li>
+
+        </ul>
+
+        <ul {if $nav_id==2}class="active"{/if}>
+
+            <li class="mi">产品</li>
+
+            <li><a href="/recommend/">一帅九将</a></li>
+
+        </ul>
+
+        <ul {if $nav_id==3}class="active"{/if}>
+
+            <li class="mi">门店</li>
+
+            <li><a href="/store/#box3">人气现场</a></li>
+
+        </ul>
+
+        <ul {if $nav_id==4}class="active"{/if}>
+
+            <li class="mi">动态</li>
+
+            <li><a href="/dynamic/">签约动态</a></li>
+
+            <li><a href="/Opening/">开业动态</a></li>
+
+        </ul>
+
+        <ul {if $nav_id==5}class="active"{/if}>
+
+            <li class="mi">团队</li>
+
+            <li><a href="/team/#box1">团队介绍</a></li>
+
+            <!-- <li><a href="/team/#box2">精英团队</a></li>
+
+            <li><a href="/team/#box3">前厅技能大赛</a></li>
+
+            <li><a href="/team/#box4">厨房技能大赛</a></li> -->
+
+        </ul>
+
+        <ul {if $nav_id==6}class="active"{/if}>
+
+            <li class="mi">加盟</li>
+
+            <li><a href="/join/#box1">品牌优势</a></li>
+
+            <li><a href="/join/#box2">加盟流程</a></li>
+
+            <li><a href="/join/#box3">总部支持</a></li>
+
+        </ul>
+
+        <ul {if $nav_id==7}class="active"{/if}>
+
+            <li class="mi">我们</li>
+
+            <li><a href="/about/#box1">公司介绍</a></li>
+
+            <!-- <li><a href="/about/#box2">品牌创始人</a></li> -->
+
+            <li><a href="/about/#box3">品牌荣誉</a></li>
+
+            <!-- <li><a href="/about/#box4">招聘信息</a></li>
+
+            <li><a href="/about/#box5">联系我们</a></li>
+
+            <li><a href="/about/#box7">我要加盟</a></li> -->
+
+        </ul>
+
+        <div class="m-b">
+
+            <a href="tel:4000280677">400-028-0677</a>
+
+            <a href=""><span class="diqiu"></span><a href="http://www.sdxhotpot.com" target="_blank">EN</a></a>
+
+        </div>
+
+    </div>
+
+</div>

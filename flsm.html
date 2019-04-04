@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- 
+   |   Powered By Shuwon - www.shuwon.com  |
+   |   Tel:028-85917677  18628176767       |
+   |   E-mail:service@shuwon.com           |
+            __     __       
+           /  \~~~/  \    
+     ,----(     ..    ) 
+    /      \__     __/   
+   /|         (\  |(
+  ^ \   /___\  /\ |   
+     |__|   |__|-" 
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="http://www.shuwon.com" />
+    <meta name="keywords" content="{if $cur_key==''}{$keywords}{else}{$cur_key}{/if}" />
+    <meta name="description" content="{if $cur_catdesc==''}{$description}{else}{$cur_catdesc}{/if}" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="/statics/assets/lib/style/common.css" />
+    
+    <link rel="stylesheet" href="/statics/assets/lib/style/swiper.css" />
+    <link rel="stylesheet" href="/statics/assets/lib/style/animate.min.css" />
+    <link rel="stylesheet" href="/statics/assets/style/sdx.shuwon.css" />
+    <title>{$web_name}</title>
+    <!--[if IE]>
+        <link rel="stylesheet" href="/statics/assets/lib/style/ie.css" />
+    <![endif]-->
+    <!--[if lt IE 9]><script>window.location.href = "ie.html"</script><![endif]-->
+</head>
+
+<body>
+    
+    <div class="container" id="">
+        <header class="animated header">{include file="header.html"}</header>
+        <div id="main">
+            <div class="scroll">
+
+                <article id="site" class="bg RP">
+
+                    <main class="newstMain width1200 common-main">
+                        <div class="box1">
+                            <div class="t-title">
+                                <img src="/statics/assets/images/fl.png" alt="{$index_name}">
+                            </div>
+                         <div class="con-box">
+                                {$simple.content}
+                         </div>
+                           
+                        </div>
+                        
+                    </main>
+                </article>
+                <footer class="footer">
+                    {include file="footer.html"}
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/statics/assets/lib/js/jquery-1.10.1.min.js"></script>
+<script src="/statics/assets/js/loadash.js"></script>
+<script src="/statics/assets/js/current-device.js"></script>
+<script src="/statics/assets/lib/js/swiper.min.js"></script>
+<script src="/statics/assets/lib/js/iscroll-probe.js"></script>
+<script src="/statics/assets/js/sdx.shuwon.js"></script>
+
+</html>
+<script>
+    window.onload = function () {
+        shuwon.loaded();
+        myScroll = new IScroll('#main', {
+            mouseWheel: true,
+            scrollbars: "custom",
+            interactiveScrollbars: true,
+            useTransition: !1,
+            probeType: 2,
+            scrollY: !0,
+            scrollX: false,
+            disablePointer: true
+        });
+        $('.BtnReturn').click(function () {
+            myScroll.scrollTo(0, 0, 1)
+        })
+    }
+</script>

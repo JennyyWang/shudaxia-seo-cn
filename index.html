@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!--
+   |   Powered By Shuwon - www.shuwon.com  |
+   |   Tel:028-85917677  18628176767       |
+   |   E-mail:service@shuwon.com           |
+            __     __
+           /  \~~~/  \
+     ,----(     ..    )
+    /      \__     __/
+   /|         (\  |(
+  ^ \   /___\  /\ |
+     |__|   |__|-"
+-->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="http://www.shuwon.com" />
+    <!-- <title>「蜀大侠官网」四川火锅加盟_成都特色火锅加盟_十大连锁火锅品牌</title> -->
+	<title>火锅 | 成都火锅 | 蜀大侠</title>
+	<meta name="keywords" content="{if $cur_key==''}{$keywords}{else}{$cur_key}{/if}" />
+	<meta name="description" content="{if $cur_catdesc==''}{$description}{else}{$cur_catdesc}{/if}" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<link rel="stylesheet" href="/statics/assets/lib/style/common.css" />
+	<link rel="stylesheet" href="/statics/assets/lib/style/swiper.css" />
+	<link rel="stylesheet" href="/statics/assets/lib/style/animate.min.css" />
+	<link rel="stylesheet" href="/statics/assets/style/sdx.shuwon.css" />
+
+	<!--[if IE]>
+        <link rel="stylesheet" href="/statics/assets/lib/style/ie.css" />
+    <![endif]-->
+	<!--[if lt IE 9]><script>window.location.href = "ie.html"</script><![endif]-->
+	<base target="_blank" />
+</head>
+
+<body id="index">
+	<div class="videocover">
+		<div class="box">
+			<div class="close iconfont">&#xe623;</div>
+			<video data-src="/statics/assets/MP4/ks.mp4" controls id="video"></video>
+		</div>
+	</div>
+	<div class="container" id="">
+
+		<header class="animated header">{include file="header.html"}</header>
+		<div id="main">
+			<div class="scroll">
+				<section>
+					<div class="banner">
+						<ul>
+							<li class="active" style="background-image:url(/statics/assets/images/banner1.jpg)">
+							</li>
+						</ul>
+						<div class="logos">
+							<img src="/statics/assets/images/logo.png" alt="{$index_name}" />
+						</div>
+						<div class="bottom">
+							<img src="/statics/assets/images/cloud.png" alt="{$index_name}" />
+						</div>
+					</div>
+					<div class="caip">
+						<img src="/statics/assets/images/cpbg1.png" class="c-img" />
+						<div class="c-t">
+							<img src="/statics/assets/images/title.png" alt="{$index_name}" />
+						</div>
+						<div class="m-banner-index">
+							<div class="playbtn">
+								<img src="/statics/assets/images/playI.png" alt="">
+							</div>
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									{foreach from=$sdx key=k item=list name=foo}
+									<div class="swiper-slide">
+										<div class="img-box">
+											<img data-src="{$list.content}" alt="{$list.img_title}" class="lazy" >
+										</div>
+										<div class="text-box">
+											<img src="{$list.thumb}" alt="{$list.img_title}" />
+											<span class="r">{$list.img_title}</span>
+										</div>
+									</div>
+									{/foreach}
+								</div>
+							</div>
+						</div>
+						<div class="c-con">
+							<div class="playbtn">
+								<img src="/statics/assets/images/playI.png" alt="">
+							</div>
+							<ul class="c">
+								{foreach from=$sdx key=k item=list name=foo}
+								<li m{$smarty.foreach.foo.iteration} now-data='{$k}' {if $smarty.foreach.foo.iteration> 5} class="ri" {/if}>
+									<div class="c-title inline-box">
+										<span class="r">{$list.img_title}</span>
+										<img src="{$list.thumb}" alt="{$list.img_title}" />
+									</div>
+								</li>
+								{/foreach}
+
+							</ul>
+							<ul class="i">
+								{foreach from=$sdx key=k item=list name=foo}
+								<li {if $smarty.foreach.foo.iteration==9}class="active"{/if}>
+									<img data-src="{$list.content}" alt="{$list.img_title}" class="lazy">
+								</li>
+								{/foreach}
+							</ul>
+							<ul class="a">
+								{foreach from=$sdx key=k item=list name=foo}
+								<li {if $smarty.foreach.foo.iteration==9}class="active"{/if}>
+									<img data-src="{$list.thumb}" alt="{$list.img_title}" class="lazy"/>
+								</li>
+								{/foreach}
+							</ul>
+						</div>
+					</div>
+					<div class="store">
+						<img src="/statics/assets/images/md.png" class="t-img" alt="{$index_name}" />
+						<div class="s-con">
+							<div class="s-title">
+								<img src="/statics/assets/images/m_title.png" alt="{$index_name}" />
+							</div>
+							<p>覆盖全国各个省市自治区共100多个城市</p>
+							<ul class="inline-box">
+								{foreach from=$menu_list key=k item=list name=foo}
+								<li onclick="location.href='{$list.url}'">
+
+									<div class="img-box">
+										<img src="{$list.content}" alt="">
+									</div>
+									<div class="text-box inline-box">
+										<p class="title" style="display: none">{$nqianyue_list.0.title}</p>
+										<p class="type">{$list.img_title}</p>
+									</div>
+
+								</li>
+								{/foreach}
+							</ul>
+							<div class="btns btns0">
+								<a href="/store/#box2">
+									<span>全部门店查询</span>
+									<div class="bg"></div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="join">
+						<!-- <img src="/statics/assets/images/bg2.jpg" class="t-img" /> -->
+						<div class="j-con">
+							<div class="w1200 inline-box">
+								<div class="left" onclick="location.href='/about/'">
+									<img src="/statics/assets/images/aboutI.png" alt="{$index_name}">
+									<img src="/statics/assets/images/arr-red.png" alt="{$index_name}" class="lll">
+								</div>
+								<div class="right" onclick="location.href='/join/'">
+									<img src="/statics/assets/images/joinI.png" alt="{$index_name}">
+									<img src="/statics/assets/images/arr-red.png" alt="{$index_name}" class="lll">
+								</div>
+								<img src="/statics/assets/images/xxm.png" alt="{$index_name}">
+							</div>
+							<div class="list">
+								<a href="https://bashudaxia.tmall.com/?spm=a1z10.3-b-s.1997427721.d4918089.282041c3Hdh9uR">
+									<img src="/statics/assets/images/tm.png" alt="{$index_name}">
+								</a>
+								<a href="https://mall.jd.com/index-670076.html">
+									<img src="/statics/assets/images/jd.jpg" alt="{$index_name}">
+								</a>
+								<!-- <a href="">
+									<img src="/statics/assets/images/wph.jpg" alt="{$index_name}">
+								</a>
+								<a href="">
+									<img src="/statics/assets/images/xhm.jpg" alt="{$index_name}">
+								</a> -->
+							</div>
+						</div>
+					</div>
+					<div class="team">
+						<img src="/statics/assets/images/bg3jpg.jpg" class="t-img" />
+						<div class="t-con">
+							<div class="img">
+								<img src="/statics/assets/images/team.png?v=1" alt="{$index_name}" />
+							</div>
+							<p>高效，高效运作、卓越治理，精英团队活力无限</p>
+							<div class="timgs">
+								<div class="tbox">
+									<img src="/statics/assets/images/teams.png" class="timg" alt="{$index_name}" />
+								</div>
+							</div>
+							<div class="btns btns1 ">
+								<a href="/team/">
+									<span>精英团队</span>
+									<div class="bg"></div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="team news">
+						<img src="/statics/assets/images/bg4.jpg" class="t-img" alt="{$index_name}" />
+						<div class="t-con">
+							<div class="img">
+								<img src="/statics/assets/images/news.png" alt="{$index_name}" />
+							</div>
+							<ul>
+								{foreach from=$news_list item=list name=foo} {if $smarty.foreach.foo.iteration<4} <li>
+									<a href="{$list.url}">
+										<div class="icon">
+											<img src="{$list.face}" alt="{$index_name}" />
+										</div>
+										<h2>{$list.title|truncate:20:'...'}</h2>
+										<p> {$list.abstract|truncate:80:'...'}</p>
+										<span>more</span>
+									</a>
+									</li>
+									{/if} {/foreach}
+							</ul>
+							<ol>
+								{foreach from=$news_list item=list name=foo} {if $smarty.foreach.foo.iteration>3}
+								<li>
+									<a href="{$list.url}">{$list.title|truncate:20:'...'}</a>
+								</li>
+								{/if} {/foreach}
+							</ol>
+						</div>
+					</div>
+				</section>
+				<footer class="footer">{include file="index_footer.html"}</footer>
+			</div>
+		</div>
+	</div>
+	<div class="mf">
+			<a href="/">
+			<p class="iconfont">&#xe652;</p>
+			<p>首页</p>
+			</a>
+			<a href="/store/#box2">
+			<p class="iconfont">&#xe605;</p>
+			<p>门店</p>
+			</a>
+			<a href="/join/">
+			<p class="iconfont">&#xe61f;</p>
+			<p>加盟</p>
+			</a>
+			<a href="tel:18030606939">
+			<p class="iconfont">&#xe602;</p>
+			<p>咨询</p>
+			</a>
+		</div>
+</body>
+<script src="/statics/assets/lib/js/jquery-1.10.1.min.js"></script>
+<script src="/statics/assets/lib/js/swiper.min.js"></script>
+<script src="/statics/assets/js/loadash.js"></script>
+<script src="/statics/assets/lib/js/iscroll-probe.js"></script>
+<script src="/statics/assets/js/current-device.js"></script>
+<script src="/statics/assets/js/sdx.shuwon.js"></script>
+
+</html>
+<script>
+	window.onload = function () {
+		shuwon.index();
+		shuwon.loaded();
+		if (device.mobile()) {
+		var swiper	= new Swiper('.m-banner-index .swiper-container', {
+				slidesPerView: 'auto',
+				initialSlide :1,
+				spaceBetween:  Math.floor($(window).width() * 0.03),
+				centeredSlides :true
+			})
+		}
+		$('.lazy').each(function(){
+			$(this).get(0).src = $(this).attr('data-src')
+		})
+
+		console.log("蜀美")
+	}
+</script>

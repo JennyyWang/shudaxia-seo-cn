@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<!-- 
+
+   |   Powered By Shuwon - www.shuwon.com  |
+
+   |   Tel:028-85917677  18628176767       |
+
+   |   E-mail:service@shuwon.com           |
+
+            __     __       
+
+           /  \~~~/  \    
+
+     ,----(     ..    ) 
+
+    /      \__     __/   
+
+   /|         (\  |(
+
+  ^ \   /___\  /\ |   
+
+     |__|   |__|-" 
+
+-->
+
+
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="author" content="http://www.shuwon.com" />
+
+    <meta name="keywords" content="{if $cur_key==''}{$keywords}{else}{$cur_key}{/if}" />
+
+    <meta name="description" content="{if $cur_catdesc==''}{$description}{else}{$cur_catdesc}{/if}" />
+
+    <meta name="format-detection" content="telephone=no" />
+
+    <meta name="apple-touch-fullscreen" content="yes" />
+
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+    <meta name="renderer" content="webkit">
+
+    <link rel="stylesheet" href="/statics/assets/lib/style/common.css" />
+
+    
+
+    <link rel="stylesheet" href="/statics/assets/lib/style/swiper.css" />
+
+    <link rel="stylesheet" href="/statics/assets/lib/style/animate.min.css" />
+
+    <link rel="stylesheet" href="/statics/assets/style/sdx.shuwon.css" />
+
+    <title>{$web_name}</title>
+
+    <!--[if IE]>
+
+        <link rel="stylesheet" href="/statics/assets/lib/style/ie.css" />
+
+    <![endif]-->
+
+    <!--[if lt IE 9]><script>window.location.href = "ie.html"</script><![endif]-->
+
+</head>
+
+    <script>
+
+        {if $check_id==10}
+
+        var a_ = 0
+
+        {elseif $check_id==11}
+
+        var a_ = 1
+
+        {elseif $check_id==12}
+
+        var a_ = 2
+
+        {elseif $check_id==13}
+
+        var a_ = 3
+
+        {/if}
+
+    </script>
+
+<body>
+
+    <div class="container" id="">
+
+        <header class="animated header">{include file="header.html"}</header>
+
+        
+
+        <div id="main">
+
+            <div class="scroll">
+
+
+
+                <article id="news" class="bg RP">
+
+
+
+                    <main class="newstMain widthSome common-main">
+
+                            <div class="LTitle inline-box">
+
+                                    <img alt="{$index_name}" src="/statics/assets/images/newsT.png" >
+
+                                    <ul>
+
+                                        <li><a href="/news/">新鲜事</a></li>
+
+                                        <li><a href="/star/">明星到店</a></li>
+
+                                        <li><a href="/dynamic/">签约动态</a></li>
+
+                                        <li><a href="/Opening/">开业动态</a></li>
+
+                                    </ul>
+
+                                </div>
+
+                        <div class="box box1 clearfix">
+
+                            <div class="t-title">
+
+                                {if $check_id==10}
+
+                                <img alt="{$index_name}" src="/statics/assets/images/xx.png" >
+
+                                {elseif $check_id==11}
+
+                                <img alt="{$index_name}" src="/statics/assets/images/mx.png" >
+
+                                {elseif $check_id==12}
+
+                                <img alt="{$index_name}" src="/statics/assets/images/signing.png" >
+
+                                {elseif $check_id==13}
+
+                                <img alt="{$index_name}" src="/statics/assets/images/ky.png" >
+
+                                {/if}
+
+                            </div>
+
+                            <div class="m-title">
+
+                                 {if $check_id==10}
+
+                                    <p><span>新鲜</span>事</p>
+
+                                    <p>fresh news</p>
+
+                                    {elseif $check_id==11}
+
+                                    <p><span>明星</span>到店</p>
+
+                                    <p>star to shop</p>
+
+                                    {elseif $check_id==12}
+
+                                    <p><span>签约</span>动态</p>
+
+                                    <p>signing contract</p>
+
+                                    {elseif $check_id==13}
+
+                                    <p><span>新鲜</span>事</p>
+
+                                    <p>fresh news</p>
+
+                                {/if}
+
+                            </div>
+
+                           <a href="{$recommend_list.0.url}">
+
+                            <div class="img-box common">
+
+                                <img alt="{$index_name}" src="{$recommend_list.0.field10}" >
+
+                                <div class="text-cover">
+
+                                    <p class="news-title">{$recommend_list.0.title}</p>
+
+                                    <p class="titme">{$recommend_list.0.add_time|timeformat:2}</p>
+
+                                    <p class="news-c">
+
+                                        {$recommend_list.0.abstract|truncate:100:'...'}
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                           </a>
+
+                            <ul class="news-list ">
+
+                               {foreach from=$article_list item=list name=foo}
+
+                                <li>
+
+                                    <a href="{$list.url}"  class="inline-box">
+
+                                        <div class="left-item">
+
+                                            <div class="img-box">
+
+                                                <img alt="{$index_name}" src="{$list.face}" >
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="right-item">
+
+                                            <p class="news-title">{$list.title}</p>
+
+                                            <p class="titme">{$list.add_time|timeformat:2}</p>
+
+                                            <p class="news-c">
+
+                                                {$list.abstract|truncate:100:'...'}
+
+                                            </p>
+
+                                            <p class="more">more <span>+</span></p>
+
+                                        </div>
+
+                                    </a>
+
+                                </li>
+
+                               {/foreach}
+
+                            </ul>
+
+                            <div class="loadmore inline-box">
+
+                                <p>展开查看更多</p>
+
+                                <p class="iconfont">&#xe615;</p>
+
+                            </div>
+
+                        </div>
+
+                    </main>
+
+                </article>
+
+                <footer class="footer">
+
+                    {include file="footer.html"}
+
+                </footer>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="mf">
+
+            <a href="/">
+
+            <p class="iconfont">&#xe652;</p>
+
+            <p>首页</p>
+
+            </a>
+
+            <a href="/store/#box2">
+
+            <p class="iconfont">&#xe605;</p>
+
+            <p>门店</p>
+
+            </a>
+
+            <a href="/join/">
+
+            <p class="iconfont">&#xe61f;</p>
+
+            <p>加盟</p>
+
+            </a>
+
+            <a href="tel:18030606939">
+
+            <p class="iconfont">&#xe602;</p>
+
+            <p>咨询</p>
+
+            </a>
+
+        </div>
+
+</body>
+
+<script src="/statics/assets/lib/js/jquery-1.10.1.min.js"></script>
+
+<script src="/statics/assets/js/current-device.js"></script>
+
+<script src="/statics/assets/lib/js/swiper.min.js"></script>
+
+<script src="/statics/assets/js/loadash.js"></script>
+
+<script src="/statics/assets/lib/js/iscroll-probe.js"></script>
+
+<script src="/statics/assets/js/sdx.shuwon.js"></script>
+
+
+
+</html>
+
+<script>
+
+    window.onload = function () {
+
+        shuwon.loaded();
+
+        shuwon.commonScroll()
+
+       
+
+    }
+
+    var swiper = new Swiper('.box3 .swiper-container', {
+
+        resistanceRatio: 0,
+
+        slidesPerView: 3,
+
+        navigation: {
+
+            nextEl: '.c-right',
+
+            prevEl: '.c-left',
+
+        },
+
+    });
+
+    new Swiper('.box1 .swiper-container', {
+
+        slidesPerView: 'auto',
+
+        resistanceRatio: 0,
+
+        spaceBetween: 40,
+
+        normalizeSlideIndex: false
+
+    })
+
+    new Swiper('.box2 .swiper-container', {
+
+        slidesPerView: 'auto',
+
+        resistanceRatio: 0,
+
+        spaceBetween: 40,
+
+        normalizeSlideIndex: false
+
+    })
+
+    new Swiper('.box4 .swiper-container', {
+
+        slidesPerView: 'auto',
+
+        resistanceRatio: 0,
+
+        spaceBetween: 540,
+
+        normalizeSlideIndex: false,
+
+        scrollbar: {
+
+            el: '.swiper-scrollbar',
+
+            draggable: true,
+
+        },
+
+    })
+
+</script>
+
+<script>
+
+    $('.LTitle ul li').eq(a_).addClass('active')
+
+    var ajaxUrl="/index.php?m=content&c=article&a=ajax&cat_id=<!--{$check_id}-->&page=";//ajax请求连接地址
+
+    var pagecur1=1;//当前页
+
+    $(".loadmore").click(function(){
+
+
+
+        if($(".loadmore p").eq(0).text()=="暂无更多..."){
+
+            return false;
+
+        }
+
+        $.get(ajaxUrl+(pagecur1+1), function(data){
+
+
+
+            if(data==0){
+
+                $(".loadmore p").eq(0).text('暂无更多...');
+
+                return false;
+
+            }
+
+            $(".news-list").append(data);
+
+            pagecur1++;
+            myScroll.refresh()
+
+        });
+
+    })
+
+</script>

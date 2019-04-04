@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--    |   Powered By Shuwon - www.shuwon.com  |   |   Tel:028-85917677  18628176767       |   |   E-mail:service@shuwon.com           |            __     __                  /  \~~~/  \         ,----(     ..    )     /      \__     __/      /|         (\  |(  ^ \   /___\  /\ |        |__|   |__|-" -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="http://www.shuwon.com" />
+    <meta name="keywords" content="{if $cur_key==''}{$keywords}{else}{$cur_key}{/if}" />
+    <meta name="description" content="{if $cur_catdesc==''}{$description}{else}{$cur_catdesc}{/if}" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="/statics/assets/lib/style/common.css" />
+    <link rel="stylesheet" href="/statics/assets/lib/style/swiper.css" />
+    <link rel="stylesheet" href="/statics/assets/lib/style/animate.min.css" />
+    <link rel="stylesheet" href="/statics/assets/style/sdx.shuwon.css" />
+    <title>{$web_name}</title>
+    <!--[if IE]>        <link rel="stylesheet" href="/statics/assets/lib/style/ie.css" />    <![endif]-->
+    <!--[if lt IE 9]><script>window.location.href = "ie.html"</script><![endif]-->
+    <style>
+        #newd .left .subtitle {
+            position: absolute;
+            left: 0;
+            top: -50px;
+            line-height: 40px;
+            color: #191919;
+            padding: 0 30px;
+            font-size: 14px;
+        }
+
+        #newd .left .subtitle a:hover {
+            color: #af2718;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="">
+        <header class="animated header">{include file="header.html"}</header>
+        <div id="main">
+            <div class="scroll">
+                <article id="newd" class="bg RP">
+                    <main class="newstMain width1200 common-main">
+                        <!-- <div class="navback">                            <div class="top_"><a href="{$cur_root_url}">{$cur_root_catname}</a>><a href="{$cur_url}">{$cur_catname}</a></div>                            <p class="back">返回</p>                        </div> -->
+                        <div class="box1 inline-box">
+                            <div class="left">
+                                <p class="newstitle">{$article.title}</p>
+                                <p class="time">
+                                    <span>发布时间：{$article.add_time|timeformat:2}</span><span>浏览次数：{$article.hits}</span>
+                                </p>
+                                <div class="content-box"> {$article.content} </div>
+                                <p class="back">返回列表页</p>
+                                <div class="subtitle">首页 >> <a href="{$cur_root_url}">{$cur_root_catname}</a> >> <a
+                                        href="{$cur_url}">{$cur_catname}</a></div>
+                            </div>
+                            <div class="right">
+                                <p class="t">相关新闻</p>
+                                <div class="list"> {foreach from=$xiangguan_list item=list name=foo} <a
+                                        href="{$list.url}">
+                                        <p class="tt">{$list.title|truncate:15:'...'}</p>
+                                        <p class="dis">{$list.abstract|truncate:20:'...'}</p>
+                                    </a> {/foreach} </div>
+                            </div>
+                        </div>
+                        <div class="box morenews">
+                            <div class="prev">{$up}</div>
+                            <div class="next">{$down}</div>
+                        </div>
+                    </main>
+                </article>
+                <footer class="footer"> {include file="footer.html"} </footer>
+            </div>
+        </div>
+    </div>
+    <div class="mf"> <a href="/">
+            <p class="iconfont">&#xe652;</p>
+            <p>首页</p>
+        </a> <a href="/store/#box2">
+            <p class="iconfont">&#xe605;</p>
+            <p>门店</p>
+        </a> <a href="/join/">
+            <p class="iconfont">&#xe61f;</p>
+            <p>加盟</p>
+        </a> <a href="tel:18030606939">
+            <p class="iconfont">&#xe602;</p>
+            <p>咨询</p>
+        </a> </div>
+</body>
+<script src="/statics/assets/lib/js/jquery-1.10.1.min.js"></script>
+<script src="/statics/assets/js/current-device.js"></script>
+<script src="/statics/assets/lib/js/swiper.min.js"></script>
+<script src="/statics/assets/lib/js/iscroll-probe.js"></script>
+<script src="/statics/assets/js/sdx.shuwon.js"></script>
+
+</html>
+<script>
+    window.onload = function () {
+        shuwon.loaded();
+        shuwon.commonScroll();
+         $('.back').click(function () {
+            history.back()
+        })
+    }
+</script>

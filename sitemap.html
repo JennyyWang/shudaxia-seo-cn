@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- 
+   |   Powered By Shuwon - www.shuwon.com  |
+   |   Tel:028-85917677  18628176767       |
+   |   E-mail:service@shuwon.com           |
+            __     __       
+           /  \~~~/  \    
+     ,----(     ..    ) 
+    /      \__     __/   
+   /|         (\  |(
+  ^ \   /___\  /\ |   
+     |__|   |__|-" 
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="http://www.shuwon.com" />
+    <meta name="keywords" content="{if $cur_key==''}{$keywords}{else}{$cur_key}{/if}" />
+    <meta name="description" content="{if $cur_catdesc==''}{$description}{else}{$cur_catdesc}{/if}" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="/statics/assets/lib/style/common.css" />
+
+    <link rel="stylesheet" href="/statics/assets/lib/style/swiper.css" />
+    <link rel="stylesheet" href="/statics/assets/lib/style/animate.min.css" />
+    <link rel="stylesheet" href="/statics/assets/style/sdx.shuwon.css" />
+    <title>{$web_name}</title>
+    <!--[if IE]>
+        <link rel="stylesheet" href="/statics/assets/lib/style/ie.css" />
+    <![endif]-->
+    <!--[if lt IE 9]><script>window.location.href = "ie.html"</script><![endif]-->
+</head>
+
+<body>
+    <div class="container" id="">
+        <header class="animated header">
+            {include file="header.html"}
+        </header>
+
+        <div id="main">
+            <div class="scroll">
+
+                <article id="site" class="bg RP">
+                    <main class="aboutMain widthSome common-main">
+                        <!-- <div class="LTitle inline-box abu">
+                            <img src="/statics/assets/images/usT.png" alt="">
+                            <ul>
+                                <li>公司介绍</li>
+                                <li>加盟店查询</li>
+                                <li>人气现场</li>
+                                <li>加盟店查询</li>
+                                <li>人气现场</li>
+                            </ul>
+                        </div> -->
+                        <div class="box box1 clearfix">
+                            <div class="t-title">
+                                <img src="/statics/assets/images/web.png" alt="{$index_name}">
+                            </div>
+                            <div class="comp">
+                                <div class="sitemap">
+                                	<ul>
+                                        <li>蜀大侠</li>
+                                        <li><a href="/">首页</a></li>
+                                    </ul>
+                                	<ul>
+	                                	<li>产品</li>
+	                                	<li><a href="/product/">大侠产品</a></li>
+	                                	<li><a href="/recommend/">一帅九将</a></li>
+                                	</ul>
+                                	<ul>
+	                                	<li>门店</li>
+	                                	<li><a href="/store/#box1">直营店</a></li>
+	                                	<li><a href="/store/#box2">加盟店查询</a></li>
+	                                	<li><a href="/store/#box3">人气现场</a></li>
+                                	</ul>
+                                	<ul>
+	                                	<li>动态</li>
+	                                	<li><a href="/news/">新鲜事</a></li>
+	                                	<li><a href="/star/">明星到店</a></li>
+	                                	<li><a href="/dynamic/">签约动态</a></li>
+	                                	<li><a href="/Opening/">开业动态</a></li>
+                                	</ul>
+                                	<ul>
+                                		<li>团队</li>
+                                		<li><a href="/team/#box1">办公环境</a></li>
+                                		<li><a href="/team/#box2">精英团队</a></li>
+                                		<li><a href="/team/#box3">蜀大侠运营部团队</a></li>
+                                		<li><a href="/team/#box4">前厅技能大赛</a></li>
+                                		<li><a href="/team/#box5">厨房技能大赛</a></li>
+                                	</ul>
+                                	<ul>
+                                		<li>加盟</li>
+                                		<li><a href="/join/#box1">品牌优势</a></li>
+                                		<li><a href="/join/#box2">加盟流程</a></li>
+                                		<li><a href="/join/#box3">总部支持</a></li>
+                                	</ul>
+                                	<ul>
+                                		<li>我们</li>
+                                		<li><a href="/about/#box1">公司介绍</a></li>
+                                		<li><a href="/about/#box2">品牌创始人</a></li>
+                                		<li><a href="/about/#box3">品牌荣誉</a></li>
+                                		<li><a href="/about/#box4">招聘信息</a></li>
+                                		<li><a href="/about/#box5">联系我们</a></li>
+                                		<li><a href="/about/#box7">我要加盟</a></li>
+                                	</ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </main>
+                </article>
+                <footer class="footer">{include file="footer.html"}</footer>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="/statics/assets/lib/js/jquery-1.10.1.min.js"></script>
+<script src="/statics/assets/lib/js/swiper.min.js"></script>
+<script src="/statics/assets/js/loadash.js"></script>
+<script src="/statics/assets/lib/js/iscroll-probe.js"></script>
+<script src="/statics/assets/js/sdx.shuwon.js"></script>
+
+</html>
+<script>
+    window.onload = function () {
+        shuwon.loaded();
+        shuwon.commonScroll()
+    }
+    $('input[name=name],input[name=city]').on('input',function(){
+        if($(this).val() != ''){
+            $(this).removeClass('err')
+        }
+    })
+    $('input[name=phone]').on('input',function(){
+        var val = $(this).val()
+        if(!shuwon.regPhone(val)){
+            $(this).addClass('err')
+        }else{
+            $(this).removeClass('err')
+        }
+    })
+    $('button').click(function(){
+        var err = false
+        $('.val').each(function(){
+            if($(this).val() == '' || $(this).hasClass('err')){
+                $(this).addClass('err')
+                err = true
+                return false;
+            }
+        })
+        if(!err){
+           $.ajax({
+               method:'post',
+               url:"http://sdx.ishuwon.cn//index.php?m=content&c=index&a=postform",
+               dataType:"json",
+               data:{
+                name:$('input[name=name]').val(),
+                city:$('input[name=city]').val(),
+                mobile:$('input[name=phone]').val(),
+                content:$('input[name=content]').val()
+               },
+               success:function(data) {
+                   shuwon.toast('提交成功');
+               }
+           })
+        }
+    })
+    var swiper = new Swiper('.box1 .swiper-container', {
+        resistanceRatio: 0,
+        slidesPerView: 'auto',
+        normalizeSlideIndex: false,
+        spaceBetween: 100,
+        navigation: {
+            prevEl: '.box1 .swiper-l',
+            nextEl: '.box1 .swiper-r'
+        },
+    });
+    new Swiper('.box4 .swiper-container', {
+        resistanceRatio: 0,
+        slidesPerView: 3,
+        spaceBetween: 20,
+        navigation: {
+            prevEl: '.box4 .swiper-l',
+            nextEl: '.box4 .swiper-r'
+        },
+        breakpoints:{
+            1440:{
+                slidesPerView: 2
+            }
+        }
+    })
+    new Swiper('.box3 .left- .swiper-container', {
+        resistanceRatio: 0,
+    })
+    new Swiper('.box3 .right- .swiper-container', {
+        resistanceRatio: 0,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        navigation: {
+            prevEl: '.box3 .top',
+            nextEl: '.box3 .bo'
+        },
+    })
+</script>

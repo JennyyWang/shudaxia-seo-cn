@@ -1,0 +1,19 @@
+{foreach from=$article_list item=list name=foo}
+                                <li>
+                                    <a href="{$list.url}"  class="inline-box">
+                                        <div class="left-item">
+                                            <div class="img-box">
+                                                <img src="{$list.face}" alt="{$list.title}">
+                                            </div>
+                                        </div>
+                                        <div class="right-item">
+                                            <p class="news-title">{$list.title}</p>
+                                            <p class="titme">{$list.add_time|timeformat:2}</p>
+                                            <p class="news-c">
+                                                {$list.abstract|truncate:100:'...'}
+                                            </p>
+                                            <p class="more">more <span>+</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                               {/foreach}
